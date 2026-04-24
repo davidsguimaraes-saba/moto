@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motoca Moto Peças</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+    Motoca Moto Peças
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<section class="carousel">
+    <div class="carousel-track" id="track">
+
+        <div class="product">
+            <h2>Capacete Esportivo</h2>
+            <img src="img/capacete.jpg" alt="Capacete">
+            <p>Promoção: R$199,90</p>
+        </div>
+
+        <div class="product">
+            <h2>Óleo de Motor</h2>
+            <img src="img/oleo_motor.jpg" alt="Óleo">
+            <p>Promoção: R$39,90</p>
+        </div>
+
+        <div class="product">
+            <h2>Pneu Traseiro</h2>
+            <img src="img/pneu.jpg" alt="Pneu">
+            <p>Promoção: R$299,90</p>
+        </div>
+
+        <div class="product">
+            <h2>Kit Relação</h2>
+            <img src="img/relacao.jpeg" alt="Kit Relação">
+            <p>Promoção: R$159,90</p>
+        </div>
+
+        <div class="product">
+            <h2>Pastilha de Freio</h2>
+            <img src="img/pastilhas.jpg" alt="Freio">
+            <p>Promoção: R$49,90</p>
+        </div>
+
+    </div>
+
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+</section>
+
+<footer>
+    <div class="footer-container">
+            <div class="footer-copy">
+                <p>© 2026 Motoca Moto Peças. Todos os direitos reservados</p> 
+            </div>
+            <!-- criar uma ancora de link -->
+            <a name="contato"></a>
+            <address class="footer-contato">
+                <h2>Contato</h2>
+                <p>Email: MotocaMotoPecas@gmail.com.br
+                <p>Tel/WhatsApp: (21)91234-1234
+            </address>
+            <nav class="footer-redes" aria-label="Redes Sociais">
+                <a href="https://pt-br.facebook.com/" target="_blank" aria-label="facebook"><img
+                        src="img/facebook-icon.png"></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><img
+                        src="img/instagram-icon.png"></a>
+                <a href="https://x.com/" target="_blank" aria-label="x"><img src="img/x-icon.avif"></a>
+            </nav>
+        </div>
+
+    <p>Localização:</p>
+    <iframe src="https://www.google.com/maps?q=Rio+de+Janeiro&output=embed"></iframe>
+
+   
+</footer>
+
+<script>
+let index = 0;
+
+function moveSlide(direction) {
+    const track = document.getElementById("track");
+    const slides = document.querySelectorAll(".product");
+
+    index += direction;
+
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+</script>
+
+</body>
+</html>

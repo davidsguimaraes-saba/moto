@@ -1,0 +1,139 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #ff2b2b;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 2px solid #ff2b2b;
+}
+
+nav a {
+    color: #ff2b2b;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.carousel {
+    width: 80%;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.product {
+    min-width: 100%;
+    text-align: center;
+}
+
+.product img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff2b2b;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 2px solid #ff2b2b;
+}
+
+footer a {
+    color: #ff2b2b;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+iframe {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border: none;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container div {
+    background-color: transparent;
+    padding: 01px;
+}
+
+.footer-contato{
+    flex-grow: 1; /*permite ocupar espaço e centralizar */
+    text-align: center;
+}
+
+.footer-redes {
+    text-align: center;
+}
+
+.footer-redes img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    /* deixar o titulo no topo */
+    align-items: center;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.mapa h3 {
+    margin-bottom: 10px;
+}
+
+/* organizar o mapa e o endereço lado a lado */
+.mapa-conteudo{
+    display: flex;
+    flex-direction: row;
+    /* manter os elementos na horizontal */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* espaçamento entre mapa e endereço */
+    width: 100%;
+}
+/* estilizar a parte de mídia */
+#midia{
+    margin: 20px;
+    text-align: center;
+}
